@@ -1,0 +1,70 @@
+
+=== debug-statements (exit 0) ===
+[INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+[INFO] Initializing environment for https://github.com/crate-ci/typos.
+[INFO] Initializing environment for https://github.com/rhysd/actionlint.
+[INFO] Initializing environment for https://github.com/DavidAnson/markdownlint-cli2.
+[INFO] Initializing environment for local:mypy==1.11.1,regex,types-cachetools,types-setuptools,types-PyYAML,types-requests,types-torch,pydantic.
+[INFO] Initializing environment for local.
+[INFO] Initializing environment for local:regex.
+[INFO] Initializing environment for local:pyyaml,check-jsonschema==0.38.0.
+[INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+debug statements (python)................................................Passed
+
+=== end-of-file-fixer (exit 0) ===
+fix end of files.........................................................Passed
+
+=== mixed-line-ending (exit 0) ===
+mixed line ending........................................................Passed
+
+=== trailing-whitespace (exit 0) ===
+trim trailing whitespace.................................................Passed
+
+=== ruff-check (exit 0) ===
+[INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+ruff check...............................................................Passed
+
+=== ruff-format (exit 0) ===
+ruff format..............................................................Passed
+
+=== typos (exit 0) ===
+[INFO] Installing environment for https://github.com/crate-ci/typos.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+typos....................................................................Passed
+
+=== mypy-3.10 (exit 0) ===
+[INFO] Installing environment for local.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+Run mypy for Python 3.10.................................................Passed
+
+=== check-mark (exit 0) ===
+[INFO] Installing environment for local.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+Ensure test files have CI marks (no direct SKU or bare platform).......................Passed
+
+=== check-spdx-header (exit 0) ===
+Check SPDX headers.......................................................Passed
+
+=== check-forbidden-imports (exit 0) ===
+[INFO] Installing environment for local.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+Check forbidden imports..................................................Passed
+
+=== check-torch-cuda-call (exit 0) ===
+Prevent new torch.cuda API calls.........................................Passed
+
+=== suggestion (exit 0) ===
+Suggestion...............................................................Passed
+- hook id: suggestion
+- duration: 0.01s
+
+To bypass all the pre-commit hooks, add --no-verify to git commit. To skip a specific hook, prefix the commit command with SKIP=<hook-id>.

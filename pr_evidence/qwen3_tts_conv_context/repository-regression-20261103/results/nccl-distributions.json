@@ -1,0 +1,10 @@
+{
+  "python": "/usr/bin/python3",
+  "distributions": [
+    {
+      "name": "nvidia-nccl-cu13",
+      "version": "2.29.7",
+      "metadata_path": "/usr/local/lib/python3.12/dist-packages/nvidia_nccl_cu13-2.29.7.dist-info"
+    }
+  ]
+}

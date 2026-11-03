@@ -1,0 +1,13 @@
+commit bff6f65ac32fba6739b8327d7caa41996bf7d1b6
+Author:     htydecode <81070259+htydecode@users.noreply.github.com>
+AuthorDate: Tue Nov 3 10:20:53 2026 +0800
+Commit:     htydecode <81070259+htydecode@users.noreply.github.com>
+CommitDate: Tue Nov 3 10:20:53 2026 +0800
+
+    [Model] Qwen3-TTS: avoid full-history concatenation for convolution context
+
+    Signed-off-by: htydecode <81070259+htydecode@users.noreply.github.com>
+
+ .../qwen3_tts/test_qwen3_tts_incremental_decode.py | 68 ++++++++++++++++++++++
+ .../modeling_qwen3_tts_tokenizer_v2.py             |  5 +-
+ 2 files changed, 72 insertions(+), 1 deletion(-)

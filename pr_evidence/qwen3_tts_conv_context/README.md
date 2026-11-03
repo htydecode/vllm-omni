@@ -57,3 +57,7 @@ The test compares per-chunk waveforms, persistent tensor/KV state, growing/rolli
 `trace_suffix.py` is a temporary diagnostic helper for isolated service requests. It is not production instrumentation and must be restored before performance timing. Supplied path counts are in `results/path-counts.json`.
 
 No VRAM, E2E, TTFA or perceptual-quality improvement is established. The small eager fallback slowdown and graph/ICL complete-decoder regression are retained rather than omitted.
+
+## Matching-head repository regression supplement
+
+See [repository-regression-20261103](repository-regression-20261103/) for the later local CUDA-enabled environment: 208 related repository cases passed (including the 120 additions), JUnit/logs, exact dependencies and applicable pre-commit results. Original A10 results remain scoped to their original environment.
