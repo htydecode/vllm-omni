@@ -61,3 +61,7 @@ No VRAM, E2E, TTFA or perceptual-quality improvement is established. The small e
 ## Matching-head repository regression supplement
 
 See [repository-regression-20261103](repository-regression-20261103/) for the later local CUDA-enabled environment: 208 related repository cases passed (including the 120 additions), JUnit/logs, exact dependencies and applicable pre-commit results. Original A10 results remain scoped to their original environment.
+
+## First review follow-up
+
+See [review-followup-20261103](review-followup-20261103/) for the current 30-case matrix, 118 passing related cases and invariant documentation. The 120/208 report above is historical evidence for its recorded head.

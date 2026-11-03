@@ -1,0 +1,42 @@
+=== debug-statements ===
+debug statements (python)................................................Passed
+
+=== end-of-file-fixer ===
+fix end of files.........................................................Passed
+
+=== mixed-line-ending ===
+mixed line ending........................................................Passed
+
+=== trailing-whitespace ===
+trim trailing whitespace.................................................Passed
+
+=== ruff-check ===
+ruff check...............................................................Passed
+
+=== ruff-format ===
+ruff format..............................................................Passed
+
+=== typos ===
+typos....................................................................Passed
+
+=== mypy-3.10 ===
+Run mypy for Python 3.10.................................................Passed
+
+=== check-mark ===
+Ensure test files have CI marks (no direct SKU or bare platform).......................Passed
+
+=== check-spdx-header ===
+Check SPDX headers.......................................................Passed
+
+=== check-forbidden-imports ===
+Check forbidden imports..................................................Passed
+
+=== check-torch-cuda-call ===
+Prevent new torch.cuda API calls.........................................Passed
+
+=== suggestion ===
+Suggestion...............................................................Passed
+- hook id: suggestion
+- duration: 0s
+
+To bypass all the pre-commit hooks, add --no-verify to git commit. To skip a specific hook, prefix the commit command with SKIP=<hook-id>.

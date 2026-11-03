@@ -1,0 +1,73 @@
+{
+  "head": "51821c01ce95b4c0bfc087c0d1ae4885d61bbd0c",
+  "backend": "cuda-enabled torch; repository CPU-marked tests",
+  "status": "passed",
+  "commands": [
+    {
+      "label": "environment",
+      "argv": [
+        "/usr/bin/python3",
+        "-c",
+        "import importlib.metadata as m, importlib.util, json, platform, sys\nfrom pathlib import Path\nimport torch\npath = Path(importlib.util.find_spec(\"vllm_omni\").origin).resolve()\nassert path.is_relative_to(Path(sys.argv[1]).resolve()), str(path)\nversions = {n:m.version(n) for n in (\"vllm\",\"vllm-omni\",\"torch\",\"transformers\",\"pytest\",\"pytest-mock\",\"pytest-asyncio\",\"pytest-xdist\")}\nassert versions[\"vllm\"].split(\"+\")[0] == \"0.32.0\", versions\nassert torch.version.cuda == \"13.0\"\nassert torch.cuda.is_available() and torch.backends.cudnn.is_available()\ndata = {\"python\":sys.version,\"platform\":platform.platform(),\"libc\":platform.libc_ver(),\n        \"versions\":versions,\"backend\":\"cuda-enabled\",\"gpu\":torch.cuda.get_device_name(0),\"cudnn_version\":torch.backends.cudnn.version(),\"cuda_runtime\":torch.version.cuda,\"source\":str(path)}\nPath(sys.argv[2]).write_text(json.dumps(data,indent=2)+\"\\n\")\nprint(json.dumps(data,indent=2))\n",
+        "/tmp/cuda-pr-source",
+        "/out/review1-evidence/environment.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "targeted-pytest",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "pytest",
+        "tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py",
+        "-k",
+        "suffix_pre_conv_context_avoids_full_history_cat",
+        "-m",
+        "core_model and cpu",
+        "--run-level=core_model",
+        "-q",
+        "-o",
+        "cache_dir=/out/review1-evidence/.pytest_cache",
+        "--junitxml=/out/review1-evidence/targeted-pytest.xml"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "related-pytest",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "pytest",
+        "tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py",
+        "tests/model_executor/models/qwen3_tts/test_qwen3_tts_code2wav.py",
+        "-m",
+        "core_model and cpu",
+        "--run-level=core_model",
+        "-q",
+        "-o",
+        "cache_dir=/out/review1-evidence/.pytest_cache",
+        "--junitxml=/out/review1-evidence/related-pytest.xml"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "pytest": {
+    "targeted-pytest": {
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 30
+    },
+    "related-pytest": {
+      "tests": 118,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 118
+    }
+  },
+  "start_utc": "2026-11-03T12:17:13.583769+00:00",
+  "finish_utc": "2026-11-03T12:18:29.642381+00:00"
+}

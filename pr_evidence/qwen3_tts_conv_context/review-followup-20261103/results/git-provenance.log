@@ -1,0 +1,13 @@
+commit 51821c01ce95b4c0bfc087c0d1ae4885d61bbd0c
+Author:     htydecode <81070259+htydecode@users.noreply.github.com>
+AuthorDate: Tue Nov 3 20:16:03 2026 +0800
+Commit:     htydecode <81070259+htydecode@users.noreply.github.com>
+CommitDate: Tue Nov 3 20:16:03 2026 +0800
+
+    [Model] Clarify Qwen3-TTS cache invariant and trim regression matrix
+
+    Signed-off-by: htydecode <81070259+htydecode@users.noreply.github.com>
+
+ .../models/qwen3_tts/test_qwen3_tts_incremental_decode.py    | 12 ++++--------
+ .../tokenizer_12hz/modeling_qwen3_tts_tokenizer_v2.py        |  2 ++
+ 2 files changed, 6 insertions(+), 8 deletions(-)
