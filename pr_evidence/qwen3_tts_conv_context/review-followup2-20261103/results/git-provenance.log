@@ -1,0 +1,12 @@
+commit 7cacc5e46d8c84651f9e15eaceb7b53a4a80892c
+Author:     htydecode <81070259+htydecode@users.noreply.github.com>
+AuthorDate: Tue Nov 3 21:29:06 2026 +0800
+Commit:     htydecode <81070259+htydecode@users.noreply.github.com>
+CommitDate: Tue Nov 3 21:29:06 2026 +0800
+
+    [Model] Cover strided BF16 suffix input and cache invariants
+
+    Signed-off-by: htydecode <81070259+htydecode@users.noreply.github.com>
+
+ .../qwen3_tts/test_qwen3_tts_incremental_decode.py | 41 +++++++++++++++++-----
+ 1 file changed, 32 insertions(+), 9 deletions(-)

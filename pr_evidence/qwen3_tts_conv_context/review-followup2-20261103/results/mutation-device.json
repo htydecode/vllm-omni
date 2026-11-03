@@ -1,0 +1,9 @@
+{
+  "mutation": "device",
+  "cases": 2,
+  "expected_pytest_exit_code": 1,
+  "actual_pytest_exit_code": 1,
+  "expected_assertion": "assert ref_hidden.device == suffix_quantized.device",
+  "mutation_detected": true,
+  "production_files_modified": false
+}

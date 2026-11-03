@@ -1,0 +1,18 @@
+$ /usr/bin/python3 -m pytest tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py tests/model_executor/models/qwen3_tts/test_qwen3_tts_code2wav.py -m 'core_model and cpu' --run-level=core_model -q -o cache_dir=/out/review2-evidence/.pytest_cache --junitxml=/out/review2-evidence/related-pytest.xml
+........................................................................ [ 60%]
+...............................................                          [100%]
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.12/dist-packages/torch/jit/_script.py:365: 14 warnings
+  /usr/local/lib/python3.12/dist-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+vllm_omni/version.py:55
+  /tmp/cuda-pr-source/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+   --> vLLM-Omni version 0.1.dev4+g7cacc5e46
+   --> vLLM version 0.32.0
+  This will likely cause compatibility issues.
+    warn_if_misaligned_vllm_version()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--- Running Summary
+119 passed, 15 warnings in 3.14s

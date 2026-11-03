@@ -1,0 +1,9 @@
+{
+  "mutation": "dtype",
+  "cases": 2,
+  "expected_pytest_exit_code": 1,
+  "actual_pytest_exit_code": 1,
+  "expected_assertion": "assert ref_hidden.dtype == suffix_quantized.dtype",
+  "mutation_detected": true,
+  "production_files_modified": false
+}

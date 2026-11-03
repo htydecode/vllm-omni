@@ -1,0 +1,59 @@
+{
+  "scope": "all hooks applicable to the two changed Python paths; no SKIP environment set",
+  "hooks": [
+    {
+      "id": "debug-statements",
+      "exit_code": 0
+    },
+    {
+      "id": "end-of-file-fixer",
+      "exit_code": 0
+    },
+    {
+      "id": "mixed-line-ending",
+      "exit_code": 0
+    },
+    {
+      "id": "trailing-whitespace",
+      "exit_code": 0
+    },
+    {
+      "id": "ruff-check",
+      "exit_code": 0
+    },
+    {
+      "id": "ruff-format",
+      "exit_code": 0
+    },
+    {
+      "id": "typos",
+      "exit_code": 0
+    },
+    {
+      "id": "mypy-3.10",
+      "exit_code": 0
+    },
+    {
+      "id": "check-mark",
+      "exit_code": 0
+    },
+    {
+      "id": "check-spdx-header",
+      "exit_code": 0
+    },
+    {
+      "id": "check-forbidden-imports",
+      "exit_code": 0
+    },
+    {
+      "id": "check-torch-cuda-call",
+      "exit_code": 0
+    },
+    {
+      "id": "suggestion",
+      "exit_code": 0
+    }
+  ],
+  "tracked_source_unchanged": true,
+  "passed": true
+}

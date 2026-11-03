@@ -65,3 +65,7 @@ See [repository-regression-20261103](repository-regression-20261103/) for the la
 ## First review follow-up
 
 See [review-followup-20261103](review-followup-20261103/) for the current 30-case matrix, 118 passing related cases and invariant documentation. The 120/208 report above is historical evidence for its recorded head.
+
+## Second review follow-up
+
+See [review-followup2-20261103](review-followup2-20261103/) for 31 focused cases, 119 related passes, actual cache-invariant assertions and mutation diagnostics. Earlier counts remain historical.

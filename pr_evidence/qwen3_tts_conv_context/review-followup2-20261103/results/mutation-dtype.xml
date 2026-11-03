@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.289" timestamp="2026-11-03T13:33:50.601679+00:00" hostname="local-cuda-test-container"><testcase classname="tests.model_executor.models.qwen3_tts.test_qwen3_tts_incremental_decode" name="test_incremental_request_audio_matches_full_decode[xvec]" time="0.074"><failure message="assert torch.float64 == torch.float32&#10; +  where torch.float64 = tensor([], size=(1, 16, 0), dtype=torch.float64).dtype&#10; +  and   torch.float32 = tensor([[[0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]...       [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]]]).dtype">mode = 'xvec'
+
+    @pytest.mark.parametrize("mode", ["xvec", "icl"])
+    def test_incremental_request_audio_matches_full_decode(mode):
+        torch.manual_seed(3)
+        decoder = _make_small_decoder()
+        decoder._incremental_chunk_frames = 25
+        prefix_frames = 0 if mode == "xvec" else 10
+        suffix_frames = 51
+        codes = torch.randint(
+            0,
+            decoder.config.codebook_size,
+            (1, decoder.config.num_quantizers, prefix_frames + suffix_frames),
+        )
+        suffix_codes = codes[..., prefix_frames:]
+        caches: dict[str, Any] = {"prefix_frames": prefix_frames}
+
+        with torch.no_grad():
+            audio_chunks = []
+            for chunk in (codes[..., : prefix_frames + 1], suffix_codes[..., 1:26], suffix_codes[..., 26:51]):
+                audio_chunks.append(decoder(chunk, caches=caches))
+                # The suffix shortcut relies on matching caches after initialization
+                # and every update, for both reference and prefixless requests.
+                ref_hidden = caches["ref_hidden"]
+                suffix_quantized = caches["suffix_quantized"]
+&gt;               assert ref_hidden.dtype == suffix_quantized.dtype
+E               assert torch.float64 == torch.float32
+E                +  where torch.float64 = tensor([], size=(1, 16, 0), dtype=torch.float64).dtype
+E                +  and   torch.float32 = tensor([[[0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]...       [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]]]).dtype
+
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py:360: AssertionError</failure></testcase><testcase classname="tests.model_executor.models.qwen3_tts.test_qwen3_tts_incremental_decode" name="test_incremental_request_audio_matches_full_decode[icl]" time="0.037"><failure message="assert torch.float64 == torch.float32&#10; +  where torch.float64 = tensor([[[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0....    [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]]], dtype=torch.float64).dtype&#10; +  and   torch.float32 = tensor([[[0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]...       [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]]]).dtype">mode = 'icl'
+
+    @pytest.mark.parametrize("mode", ["xvec", "icl"])
+    def test_incremental_request_audio_matches_full_decode(mode):
+        torch.manual_seed(3)
+        decoder = _make_small_decoder()
+        decoder._incremental_chunk_frames = 25
+        prefix_frames = 0 if mode == "xvec" else 10
+        suffix_frames = 51
+        codes = torch.randint(
+            0,
+            decoder.config.codebook_size,
+            (1, decoder.config.num_quantizers, prefix_frames + suffix_frames),
+        )
+        suffix_codes = codes[..., prefix_frames:]
+        caches: dict[str, Any] = {"prefix_frames": prefix_frames}
+
+        with torch.no_grad():
+            audio_chunks = []
+            for chunk in (codes[..., : prefix_frames + 1], suffix_codes[..., 1:26], suffix_codes[..., 26:51]):
+                audio_chunks.append(decoder(chunk, caches=caches))
+                # The suffix shortcut relies on matching caches after initialization
+                # and every update, for both reference and prefixless requests.
+                ref_hidden = caches["ref_hidden"]
+                suffix_quantized = caches["suffix_quantized"]
+&gt;               assert ref_hidden.dtype == suffix_quantized.dtype
+E               assert torch.float64 == torch.float32
+E                +  where torch.float64 = tensor([[[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0....    [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]]], dtype=torch.float64).dtype
+E                +  and   torch.float32 = tensor([[[0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]...       [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]]]).dtype
+
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py:360: AssertionError</failure></testcase></testsuite></testsuites>

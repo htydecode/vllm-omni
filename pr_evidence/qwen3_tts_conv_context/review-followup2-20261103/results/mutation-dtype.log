@@ -1,0 +1,105 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+___________ test_incremental_request_audio_matches_full_decode[xvec] ___________
+
+mode = 'xvec'
+
+    @pytest.mark.parametrize("mode", ["xvec", "icl"])
+    def test_incremental_request_audio_matches_full_decode(mode):
+        torch.manual_seed(3)
+        decoder = _make_small_decoder()
+        decoder._incremental_chunk_frames = 25
+        prefix_frames = 0 if mode == "xvec" else 10
+        suffix_frames = 51
+        codes = torch.randint(
+            0,
+            decoder.config.codebook_size,
+            (1, decoder.config.num_quantizers, prefix_frames + suffix_frames),
+        )
+        suffix_codes = codes[..., prefix_frames:]
+        caches: dict[str, Any] = {"prefix_frames": prefix_frames}
+
+        with torch.no_grad():
+            audio_chunks = []
+            for chunk in (codes[..., : prefix_frames + 1], suffix_codes[..., 1:26], suffix_codes[..., 26:51]):
+                audio_chunks.append(decoder(chunk, caches=caches))
+                # The suffix shortcut relies on matching caches after initialization
+                # and every update, for both reference and prefixless requests.
+                ref_hidden = caches["ref_hidden"]
+                suffix_quantized = caches["suffix_quantized"]
+>               assert ref_hidden.dtype == suffix_quantized.dtype
+E               assert torch.float64 == torch.float32
+E                +  where torch.float64 = tensor([], size=(1, 16, 0), dtype=torch.float64).dtype
+E                +  and   torch.float32 = tensor([[[0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]...       [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]]]).dtype
+
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py:360: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+--- Running test: test_incremental_request_audio_matches_full_decode[xvec]
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py::test_incremental_request_audio_matches_full_decode[xvec]: CPU reference threads 3 -> 1
+--------------------------- Captured stdout teardown ---------------------------
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py::test_incremental_request_audio_matches_full_decode[xvec]: CPU reference elapsed 0.107s; restored threads 3
+___________ test_incremental_request_audio_matches_full_decode[icl] ____________
+
+mode = 'icl'
+
+    @pytest.mark.parametrize("mode", ["xvec", "icl"])
+    def test_incremental_request_audio_matches_full_decode(mode):
+        torch.manual_seed(3)
+        decoder = _make_small_decoder()
+        decoder._incremental_chunk_frames = 25
+        prefix_frames = 0 if mode == "xvec" else 10
+        suffix_frames = 51
+        codes = torch.randint(
+            0,
+            decoder.config.codebook_size,
+            (1, decoder.config.num_quantizers, prefix_frames + suffix_frames),
+        )
+        suffix_codes = codes[..., prefix_frames:]
+        caches: dict[str, Any] = {"prefix_frames": prefix_frames}
+
+        with torch.no_grad():
+            audio_chunks = []
+            for chunk in (codes[..., : prefix_frames + 1], suffix_codes[..., 1:26], suffix_codes[..., 26:51]):
+                audio_chunks.append(decoder(chunk, caches=caches))
+                # The suffix shortcut relies on matching caches after initialization
+                # and every update, for both reference and prefixless requests.
+                ref_hidden = caches["ref_hidden"]
+                suffix_quantized = caches["suffix_quantized"]
+>               assert ref_hidden.dtype == suffix_quantized.dtype
+E               assert torch.float64 == torch.float32
+E                +  where torch.float64 = tensor([[[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0....    [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n         [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]]], dtype=torch.float64).dtype
+E                +  and   torch.float32 = tensor([[[0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]...       [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.],\n         [0.]]]).dtype
+
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py:360: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+--- Running test: test_incremental_request_audio_matches_full_decode[icl]
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py::test_incremental_request_audio_matches_full_decode[icl]: CPU reference threads 3 -> 1
+--------------------------- Captured stdout teardown ---------------------------
+tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py::test_incremental_request_audio_matches_full_decode[icl]: CPU reference elapsed 0.053s; restored threads 3
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.12/dist-packages/torch/jit/_script.py:365: 14 warnings
+  /usr/local/lib/python3.12/dist-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+vllm_omni/version.py:55
+  /tmp/cuda-pr-source/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+   --> vLLM-Omni version 0.1.dev4+g7cacc5e46
+   --> vLLM version 0.32.0
+  This will likely cause compatibility issues.
+    warn_if_misaligned_vllm_version()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--- Running Summary
+=========================== short test summary info ============================
+FAILED tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py::test_incremental_request_audio_matches_full_decode[xvec]
+FAILED tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py::test_incremental_request_audio_matches_full_decode[icl]
+2 failed, 68 deselected, 15 warnings in 0.35s
+{
+  "mutation": "dtype",
+  "cases": 2,
+  "expected_pytest_exit_code": 1,
+  "actual_pytest_exit_code": 1,
+  "expected_assertion": "assert ref_hidden.dtype == suffix_quantized.dtype",
+  "mutation_detected": true,
+  "production_files_modified": false
+}
