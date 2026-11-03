@@ -1,0 +1,700 @@
+{
+  "torch": "2.13.0+cu130",
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "gpu": "NVIDIA A10",
+  "channels": 512,
+  "iterations": 100,
+  "repeats": 5,
+  "scope": "context extraction plus next concatenation; identity quantizer; not full decoder or TTS",
+  "baseline_file": "server-file:baseline.py",
+  "candidate_file": "server-file:candidate.py",
+  "results": [
+    {
+      "batch": 1,
+      "ref_frames": 0,
+      "old_frames": 1,
+      "new_frames": 25,
+      "mode": "eager",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 26.403069496154785,
+            "cuda_event_us_per_call": 26.357760429382324
+          },
+          {
+            "wall_us_per_call": 24.775266647338867,
+            "cuda_event_us_per_call": 24.719359874725342
+          },
+          {
+            "wall_us_per_call": 24.484992027282715,
+            "cuda_event_us_per_call": 24.432640075683594
+          },
+          {
+            "wall_us_per_call": 25.153011083602905,
+            "cuda_event_us_per_call": 25.088000297546387
+          },
+          {
+            "wall_us_per_call": 26.347190141677856,
+            "cuda_event_us_per_call": 26.265599727630615
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 25.84978938102722,
+            "cuda_event_us_per_call": 25.774080753326416
+          },
+          {
+            "wall_us_per_call": 24.69375729560852,
+            "cuda_event_us_per_call": 24.637439250946045
+          },
+          {
+            "wall_us_per_call": 25.496631860733032,
+            "cuda_event_us_per_call": 25.436160564422607
+          },
+          {
+            "wall_us_per_call": 217.20737218856812,
+            "cuda_event_us_per_call": 217.07775115966797
+          },
+          {
+            "wall_us_per_call": 31.43221139907837,
+            "cuda_event_us_per_call": 31.32416009902954
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 25.153011083602905,
+        "candidate": 25.84978938102722
+      }
+    },
+    {
+      "batch": 1,
+      "ref_frames": 0,
+      "old_frames": 1,
+      "new_frames": 25,
+      "mode": "graph",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 4.3426454067230225,
+            "cuda_event_us_per_call": 4.306879937648773
+          },
+          {
+            "wall_us_per_call": 4.146695137023926,
+            "cuda_event_us_per_call": 4.075520038604736
+          },
+          {
+            "wall_us_per_call": 4.189014434814453,
+            "cuda_event_us_per_call": 4.136959910392761
+          },
+          {
+            "wall_us_per_call": 4.14043664932251,
+            "cuda_event_us_per_call": 4.085760116577148
+          },
+          {
+            "wall_us_per_call": 4.136115312576294,
+            "cuda_event_us_per_call": 4.085760116577148
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 4.285722970962524,
+            "cuda_event_us_per_call": 4.2291200160980225
+          },
+          {
+            "wall_us_per_call": 4.147142171859741,
+            "cuda_event_us_per_call": 4.085760116577148
+          },
+          {
+            "wall_us_per_call": 4.137307405471802,
+            "cuda_event_us_per_call": 4.075520038604736
+          },
+          {
+            "wall_us_per_call": 4.1359663009643555,
+            "cuda_event_us_per_call": 4.075520038604736
+          },
+          {
+            "wall_us_per_call": 4.14624810218811,
+            "cuda_event_us_per_call": 4.085760116577148
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 4.146695137023926,
+        "candidate": 4.14624810218811
+      }
+    },
+    {
+      "batch": 1,
+      "ref_frames": 0,
+      "old_frames": 2,
+      "new_frames": 25,
+      "mode": "eager",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 24.83367919921875,
+            "cuda_event_us_per_call": 24.780800342559814
+          },
+          {
+            "wall_us_per_call": 24.405717849731445,
+            "cuda_event_us_per_call": 24.340479373931885
+          },
+          {
+            "wall_us_per_call": 223.30299019813538,
+            "cuda_event_us_per_call": 223.22175979614258
+          },
+          {
+            "wall_us_per_call": 25.003254413604736,
+            "cuda_event_us_per_call": 24.924159049987793
+          },
+          {
+            "wall_us_per_call": 24.245530366897583,
+            "cuda_event_us_per_call": 24.186880588531494
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 14.995932579040527,
+            "cuda_event_us_per_call": 14.940160512924194
+          },
+          {
+            "wall_us_per_call": 14.993399381637573,
+            "cuda_event_us_per_call": 14.940160512924194
+          },
+          {
+            "wall_us_per_call": 15.294402837753296,
+            "cuda_event_us_per_call": 15.237120389938354
+          },
+          {
+            "wall_us_per_call": 15.011727809906006,
+            "cuda_event_us_per_call": 14.950400590896606
+          },
+          {
+            "wall_us_per_call": 15.218853950500488,
+            "cuda_event_us_per_call": 15.16543984413147
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 24.83367919921875,
+        "candidate": 15.011727809906006
+      }
+    },
+    {
+      "batch": 1,
+      "ref_frames": 0,
+      "old_frames": 2,
+      "new_frames": 25,
+      "mode": "graph",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 4.198849201202393,
+            "cuda_event_us_per_call": 4.156799912452698
+          },
+          {
+            "wall_us_per_call": 4.060119390487671,
+            "cuda_event_us_per_call": 4.003840088844299
+          },
+          {
+            "wall_us_per_call": 4.056692123413086,
+            "cuda_event_us_per_call": 4.003840088844299
+          },
+          {
+            "wall_us_per_call": 4.057884216308594,
+            "cuda_event_us_per_call": 4.003840088844299
+          },
+          {
+            "wall_us_per_call": 4.052072763442993,
+            "cuda_event_us_per_call": 3.993600010871887
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 3.8185715675354004,
+            "cuda_event_us_per_call": 3.758080005645752
+          },
+          {
+            "wall_us_per_call": 3.8766860961914062,
+            "cuda_event_us_per_call": 3.819519877433777
+          },
+          {
+            "wall_us_per_call": 3.662705421447754,
+            "cuda_event_us_per_call": 3.614720106124878
+          },
+          {
+            "wall_us_per_call": 3.712773323059082,
+            "cuda_event_us_per_call": 3.6556801199913025
+          },
+          {
+            "wall_us_per_call": 203.6401629447937,
+            "cuda_event_us_per_call": 203.43807220458984
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 4.057884216308594,
+        "candidate": 3.8185715675354004
+      }
+    },
+    {
+      "batch": 1,
+      "ref_frames": 0,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "eager",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 25.119930505752563,
+            "cuda_event_us_per_call": 25.067520141601562
+          },
+          {
+            "wall_us_per_call": 25.710314512252808,
+            "cuda_event_us_per_call": 25.64095973968506
+          },
+          {
+            "wall_us_per_call": 24.958550930023193,
+            "cuda_event_us_per_call": 24.893438816070557
+          },
+          {
+            "wall_us_per_call": 225.33223032951355,
+            "cuda_event_us_per_call": 225.1571273803711
+          },
+          {
+            "wall_us_per_call": 25.44581890106201,
+            "cuda_event_us_per_call": 25.384960174560547
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 17.086714506149292,
+            "cuda_event_us_per_call": 17.008639574050903
+          },
+          {
+            "wall_us_per_call": 15.783160924911499,
+            "cuda_event_us_per_call": 15.718400478363037
+          },
+          {
+            "wall_us_per_call": 15.659034252166748,
+            "cuda_event_us_per_call": 15.605759620666504
+          },
+          {
+            "wall_us_per_call": 15.979856252670288,
+            "cuda_event_us_per_call": 15.923199653625488
+          },
+          {
+            "wall_us_per_call": 16.668736934661865,
+            "cuda_event_us_per_call": 16.599040031433105
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 25.44581890106201,
+        "candidate": 15.979856252670288
+      }
+    },
+    {
+      "batch": 1,
+      "ref_frames": 0,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "graph",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 4.865676164627075,
+            "cuda_event_us_per_call": 4.826560020446777
+          },
+          {
+            "wall_us_per_call": 4.821717739105225,
+            "cuda_event_us_per_call": 4.77183997631073
+          },
+          {
+            "wall_us_per_call": 4.820525646209717,
+            "cuda_event_us_per_call": 4.761599898338318
+          },
+          {
+            "wall_us_per_call": 4.8157572746276855,
+            "cuda_event_us_per_call": 4.761599898338318
+          },
+          {
+            "wall_us_per_call": 4.815608263015747,
+            "cuda_event_us_per_call": 4.761599898338318
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 3.7272274494171143,
+            "cuda_event_us_per_call": 3.676159977912903
+          },
+          {
+            "wall_us_per_call": 3.8695335388183594,
+            "cuda_event_us_per_call": 3.819519877433777
+          },
+          {
+            "wall_us_per_call": 3.814399242401123,
+            "cuda_event_us_per_call": 3.758080005645752
+          },
+          {
+            "wall_us_per_call": 3.8395822048187256,
+            "cuda_event_us_per_call": 3.7785598635673523
+          },
+          {
+            "wall_us_per_call": 3.7464499473571777,
+            "cuda_event_us_per_call": 3.686400055885315
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 4.820525646209717,
+        "candidate": 3.814399242401123
+      }
+    },
+    {
+      "batch": 1,
+      "ref_frames": 72,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "eager",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 229.75265979766846,
+            "cuda_event_us_per_call": 229.68320846557617
+          },
+          {
+            "wall_us_per_call": 26.155859231948853,
+            "cuda_event_us_per_call": 26.08128070831299
+          },
+          {
+            "wall_us_per_call": 30.145645141601562,
+            "cuda_event_us_per_call": 30.064640045166016
+          },
+          {
+            "wall_us_per_call": 25.374889373779297,
+            "cuda_event_us_per_call": 25.313279628753662
+          },
+          {
+            "wall_us_per_call": 25.037378072738647,
+            "cuda_event_us_per_call": 24.975359439849854
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 16.52061939239502,
+            "cuda_event_us_per_call": 16.45568013191223
+          },
+          {
+            "wall_us_per_call": 16.852766275405884,
+            "cuda_event_us_per_call": 16.773120164871216
+          },
+          {
+            "wall_us_per_call": 16.759932041168213,
+            "cuda_event_us_per_call": 16.69119954109192
+          },
+          {
+            "wall_us_per_call": 18.555670976638794,
+            "cuda_event_us_per_call": 18.472959995269775
+          },
+          {
+            "wall_us_per_call": 15.689879655838013,
+            "cuda_event_us_per_call": 15.63647985458374
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 26.155859231948853,
+        "candidate": 16.759932041168213
+      }
+    },
+    {
+      "batch": 1,
+      "ref_frames": 72,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "graph",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 4.928410053253174,
+            "cuda_event_us_per_call": 4.886080026626587
+          },
+          {
+            "wall_us_per_call": 4.870593547821045,
+            "cuda_event_us_per_call": 4.8127999901771545
+          },
+          {
+            "wall_us_per_call": 4.876554012298584,
+            "cuda_event_us_per_call": 4.823040068149567
+          },
+          {
+            "wall_us_per_call": 4.872530698776245,
+            "cuda_event_us_per_call": 4.823040068149567
+          },
+          {
+            "wall_us_per_call": 4.868954420089722,
+            "cuda_event_us_per_call": 4.8127999901771545
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 3.8805603981018066,
+            "cuda_event_us_per_call": 3.829759955406189
+          },
+          {
+            "wall_us_per_call": 3.6710500717163086,
+            "cuda_event_us_per_call": 3.624959886074066
+          },
+          {
+            "wall_us_per_call": 3.6926567554473877,
+            "cuda_event_us_per_call": 3.6351999640464783
+          },
+          {
+            "wall_us_per_call": 3.7413835525512695,
+            "cuda_event_us_per_call": 3.686400055885315
+          },
+          {
+            "wall_us_per_call": 3.716498613357544,
+            "cuda_event_us_per_call": 3.6556801199913025
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 4.872530698776245,
+        "candidate": 3.716498613357544
+      }
+    },
+    {
+      "batch": 4,
+      "ref_frames": 0,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "eager",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 25.660842657089233,
+            "cuda_event_us_per_call": 25.59999942779541
+          },
+          {
+            "wall_us_per_call": 25.500059127807617,
+            "cuda_event_us_per_call": 25.436160564422607
+          },
+          {
+            "wall_us_per_call": 215.15414118766785,
+            "cuda_event_us_per_call": 214.96831893920898
+          },
+          {
+            "wall_us_per_call": 25.66322684288025,
+            "cuda_event_us_per_call": 25.589759349822998
+          },
+          {
+            "wall_us_per_call": 25.961250066757202,
+            "cuda_event_us_per_call": 25.886719226837158
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 15.950798988342285,
+            "cuda_event_us_per_call": 15.892479419708252
+          },
+          {
+            "wall_us_per_call": 16.367435455322266,
+            "cuda_event_us_per_call": 16.291840076446533
+          },
+          {
+            "wall_us_per_call": 16.910433769226074,
+            "cuda_event_us_per_call": 16.834559440612793
+          },
+          {
+            "wall_us_per_call": 15.959888696670532,
+            "cuda_event_us_per_call": 15.902719497680664
+          },
+          {
+            "wall_us_per_call": 16.122907400131226,
+            "cuda_event_us_per_call": 16.05631947517395
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 25.66322684288025,
+        "candidate": 16.122907400131226
+      }
+    },
+    {
+      "batch": 4,
+      "ref_frames": 0,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "graph",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 5.038082599639893,
+            "cuda_event_us_per_call": 4.999679923057556
+          },
+          {
+            "wall_us_per_call": 5.6743621826171875,
+            "cuda_event_us_per_call": 5.611519813537598
+          },
+          {
+            "wall_us_per_call": 5.005300045013428,
+            "cuda_event_us_per_call": 4.956159889698029
+          },
+          {
+            "wall_us_per_call": 4.994422197341919,
+            "cuda_event_us_per_call": 4.935680031776428
+          },
+          {
+            "wall_us_per_call": 4.989504814147949,
+            "cuda_event_us_per_call": 4.935680031776428
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 4.455745220184326,
+            "cuda_event_us_per_call": 4.362240135669708
+          },
+          {
+            "wall_us_per_call": 6.0589611530303955,
+            "cuda_event_us_per_call": 5.980160236358643
+          },
+          {
+            "wall_us_per_call": 203.1978964805603,
+            "cuda_event_us_per_call": 3.1641599535942078
+          },
+          {
+            "wall_us_per_call": 3.943890333175659,
+            "cuda_event_us_per_call": 3.911679983139038
+          },
+          {
+            "wall_us_per_call": 3.983825445175171,
+            "cuda_event_us_per_call": 3.92192006111145
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 5.005300045013428,
+        "candidate": 4.455745220184326
+      }
+    },
+    {
+      "batch": 4,
+      "ref_frames": 72,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "eager",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 25.638043880462646,
+            "cuda_event_us_per_call": 25.589759349822998
+          },
+          {
+            "wall_us_per_call": 26.093125343322754,
+            "cuda_event_us_per_call": 26.009600162506104
+          },
+          {
+            "wall_us_per_call": 25.57232975959778,
+            "cuda_event_us_per_call": 25.49760103225708
+          },
+          {
+            "wall_us_per_call": 210.1956307888031,
+            "cuda_event_us_per_call": 210.09408950805664
+          },
+          {
+            "wall_us_per_call": 25.954395532608032,
+            "cuda_event_us_per_call": 25.886719226837158
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 15.937387943267822,
+            "cuda_event_us_per_call": 15.872000455856323
+          },
+          {
+            "wall_us_per_call": 15.950947999954224,
+            "cuda_event_us_per_call": 15.882240533828735
+          },
+          {
+            "wall_us_per_call": 15.959441661834717,
+            "cuda_event_us_per_call": 15.902719497680664
+          },
+          {
+            "wall_us_per_call": 16.1762535572052,
+            "cuda_event_us_per_call": 16.117759943008423
+          },
+          {
+            "wall_us_per_call": 15.724152326583862,
+            "cuda_event_us_per_call": 15.677440166473389
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 25.954395532608032,
+        "candidate": 15.950947999954224
+      }
+    },
+    {
+      "batch": 4,
+      "ref_frames": 72,
+      "old_frames": 72,
+      "new_frames": 25,
+      "mode": "graph",
+      "samples": {
+        "baseline": [
+          {
+            "wall_us_per_call": 5.3566694259643555,
+            "cuda_event_us_per_call": 5.3145599365234375
+          },
+          {
+            "wall_us_per_call": 5.3022801876068115,
+            "cuda_event_us_per_call": 5.2428799867630005
+          },
+          {
+            "wall_us_per_call": 5.418658256530762,
+            "cuda_event_us_per_call": 5.335040092468262
+          },
+          {
+            "wall_us_per_call": 5.308687686920166,
+            "cuda_event_us_per_call": 5.253120064735413
+          },
+          {
+            "wall_us_per_call": 5.325675010681152,
+            "cuda_event_us_per_call": 5.273600220680237
+          }
+        ],
+        "candidate": [
+          {
+            "wall_us_per_call": 3.764033317565918,
+            "cuda_event_us_per_call": 3.7068799138069153
+          },
+          {
+            "wall_us_per_call": 3.7197768688201904,
+            "cuda_event_us_per_call": 3.676159977912903
+          },
+          {
+            "wall_us_per_call": 3.7367641925811768,
+            "cuda_event_us_per_call": 3.686400055885315
+          },
+          {
+            "wall_us_per_call": 3.765225410461426,
+            "cuda_event_us_per_call": 3.7068799138069153
+          },
+          {
+            "wall_us_per_call": 3.746151924133301,
+            "cuda_event_us_per_call": 3.696640133857727
+          }
+        ]
+      },
+      "median_wall_us": {
+        "baseline": 5.325675010681152,
+        "candidate": 3.746151924133301
+      }
+    }
+  ],
+  "baseline_sha256": "5be299858d3d242eb060f05dd643bf81582dee47247403afd35699fcbd12e990",
+  "candidate_sha256": "d0b46501c11ff0239970198c71f01e5fcf295d8a6fe0939e1a813b005a70886f"
+}

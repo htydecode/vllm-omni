@@ -1,0 +1,432 @@
+{
+  "source_reports": [
+    "server-file:run.7Pvjw0.json",
+    "server-file:run.Vlvyok.json",
+    "server-file:run.k4S669.json",
+    "server-file:run.m4H41D.json",
+    "server-file:run.y7jWBe.json"
+  ],
+  "results": [
+    {
+      "case": [
+        "eager",
+        1,
+        0,
+        1,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": -0.4242360591888428
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": -0.09402632713317871
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": -1.0116398334503174
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": -0.20742416381835938
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": -0.17523765563964844
+        }
+      ],
+      "positive_runs": 0,
+      "median_saved_us": -0.20742416381835938,
+      "min_saved_us": -1.0116398334503174,
+      "max_saved_us": -0.09402632713317871
+    },
+    {
+      "case": [
+        "eager",
+        1,
+        0,
+        2,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 9.165257215499878
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 9.302347898483276
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 9.837746620178223
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 9.462684392929077
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 9.54553484916687
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 9.462684392929077,
+      "min_saved_us": 9.165257215499878,
+      "max_saved_us": 9.837746620178223
+    },
+    {
+      "case": [
+        "eager",
+        1,
+        0,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 9.533166885375977
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 9.007751941680908
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 9.299516677856445
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 10.12951135635376
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 9.543150663375854
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 9.533166885375977,
+      "min_saved_us": 9.007751941680908,
+      "max_saved_us": 10.12951135635376
+    },
+    {
+      "case": [
+        "eager",
+        1,
+        72,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 9.579509496688843
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 9.309500455856323
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 9.347498416900635
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 9.661167860031128
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 8.899867534637451
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 9.347498416900635,
+      "min_saved_us": 8.899867534637451,
+      "max_saved_us": 9.661167860031128
+    },
+    {
+      "case": [
+        "eager",
+        4,
+        0,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 8.924156427383423
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 9.381324052810669
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 9.710043668746948
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 9.99361276626587
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 9.721815586090088
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 9.710043668746948,
+      "min_saved_us": 8.924156427383423,
+      "max_saved_us": 9.99361276626587
+    },
+    {
+      "case": [
+        "eager",
+        4,
+        72,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 8.912384510040283
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 9.280890226364136
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 10.14217734336853
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 9.613633155822754
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 10.062307119369507
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 9.613633155822754,
+      "min_saved_us": 8.912384510040283,
+      "max_saved_us": 10.14217734336853
+    },
+    {
+      "case": [
+        "graph",
+        1,
+        0,
+        1,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 0.0032782554626464844
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": -0.0008940696716308594
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 0.004470348358154297
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 0.005662441253662109
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": -0.0028312206268310547
+        }
+      ],
+      "positive_runs": 3,
+      "median_saved_us": 0.0032782554626464844,
+      "min_saved_us": -0.0028312206268310547,
+      "max_saved_us": 0.005662441253662109
+    },
+    {
+      "case": [
+        "graph",
+        1,
+        0,
+        2,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 0.7291138172149658
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 0.6523728370666504
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 0.3451108932495117
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 0.19073486328125
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 0.3279745578765869
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 0.3451108932495117,
+      "min_saved_us": 0.19073486328125,
+      "max_saved_us": 0.7291138172149658
+    },
+    {
+      "case": [
+        "graph",
+        1,
+        0,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 1.4062225818634033
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 1.4056265354156494
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 1.0061264038085938
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 1.0000169277191162
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 1.0688602924346924
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 1.0688602924346924,
+      "min_saved_us": 1.0000169277191162,
+      "max_saved_us": 1.4062225818634033
+    },
+    {
+      "case": [
+        "graph",
+        1,
+        72,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 1.2677907943725586
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 0.07972121238708496
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 1.1524558067321777
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 1.1083483695983887
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 1.1727213859558105
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 1.1524558067321777,
+      "min_saved_us": 0.07972121238708496,
+      "max_saved_us": 1.2677907943725586
+    },
+    {
+      "case": [
+        "graph",
+        4,
+        0,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 1.6014277935028076
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 1.6373395919799805
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 0.5823373794555664
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 1.2896955013275146
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 1.2029707431793213
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 1.2896955013275146,
+      "min_saved_us": 0.5823373794555664,
+      "max_saved_us": 1.6373395919799805
+    },
+    {
+      "case": [
+        "graph",
+        4,
+        72,
+        72,
+        25
+      ],
+      "independent_runs": [
+        {
+          "file": "server-file:run.7Pvjw0.json",
+          "paired_median_saved_us": 1.9468367099761963
+        },
+        {
+          "file": "server-file:run.Vlvyok.json",
+          "paired_median_saved_us": 1.8705427646636963
+        },
+        {
+          "file": "server-file:run.k4S669.json",
+          "paired_median_saved_us": 1.582503318786621
+        },
+        {
+          "file": "server-file:run.m4H41D.json",
+          "paired_median_saved_us": 1.554042100906372
+        },
+        {
+          "file": "server-file:run.y7jWBe.json",
+          "paired_median_saved_us": 1.5838444232940674
+        }
+      ],
+      "positive_runs": 5,
+      "median_saved_us": 1.5838444232940674,
+      "min_saved_us": 1.554042100906372,
+      "max_saved_us": 1.9468367099761963
+    }
+  ],
+  "interpretation": "Independent-run paired medians. Min/max is not a confidence interval."
+}

@@ -1,0 +1,6 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "python_executable": "server-file:python",
+  "source": "server-file:modeling_qwen3_tts_tokenizer_v2.py",
+  "source_sha256": "cb692d0c4a9b0b6aac797a78fcd39be085b0cc5a127ac508843d6fd5daf3a9b3"
+}

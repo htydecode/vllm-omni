@@ -1,0 +1,412 @@
+{
+  "scope": "real-weight segmented decoder, fixed random codec IDs, batch 1, not serving or audio quality",
+  "source_file": "server-file:modeling_qwen3_tts_tokenizer_v2.py",
+  "source_sha256": "cb692d0c4a9b0b6aac797a78fcd39be085b0cc5a127ac508843d6fd5daf3a9b3",
+  "tokenizer_config_sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+  "checkpoint_files_bytes": {
+    "model.safetensors": 682293092
+  },
+  "attention": "sdpa",
+  "torch": "2.13.0+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA A10",
+  "dtype": "bfloat16",
+  "warmup": 2,
+  "repeats": 10,
+  "results": [
+    {
+      "mode": "eager",
+      "reference_mode": "xvec",
+      "chunk_lengths": [
+        1,
+        25,
+        25,
+        25,
+        25,
+        25,
+        7
+      ],
+      "prefix_frames": 0,
+      "output_samples_by_chunk": [
+        1920,
+        48000,
+        48000,
+        48000,
+        48000,
+        48000,
+        13440
+      ],
+      "max_abs_error": 0.0,
+      "exact_waveform_and_cache_match": true,
+      "samples_ms_per_sequence": {
+        "baseline": [
+          202.42083072662354,
+          189.4230991601944,
+          198.43746721744537,
+          194.6987509727478,
+          198.8581418991089,
+          229.95556890964508,
+          204.2624056339264,
+          175.4632294178009,
+          203.9971500635147,
+          208.7620347738266
+        ],
+        "candidate": [
+          178.64878475666046,
+          163.9949530363083,
+          210.47356724739075,
+          205.3072601556778,
+          203.4112513065338,
+          176.29672586917877,
+          200.26686787605286,
+          198.49982857704163,
+          162.1534377336502,
+          221.56503796577454
+        ]
+      },
+      "median_ms": {
+        "baseline": 200.6394863128662,
+        "candidate": 199.38334822654724
+      },
+      "graph_correctness_replays": {}
+    },
+    {
+      "mode": "eager",
+      "reference_mode": "icl",
+      "chunk_lengths": [
+        1,
+        25,
+        25,
+        25,
+        25,
+        25,
+        7
+      ],
+      "prefix_frames": 72,
+      "output_samples_by_chunk": [
+        1920,
+        48000,
+        48000,
+        48000,
+        48000,
+        48000,
+        13440
+      ],
+      "max_abs_error": 0.0,
+      "exact_waveform_and_cache_match": true,
+      "samples_ms_per_sequence": {
+        "baseline": [
+          196.7567801475525,
+          206.40277862548828,
+          201.42552256584167,
+          199.87852871418,
+          200.5460411310196,
+          205.59102296829224,
+          201.24338567256927,
+          208.518385887146,
+          200.0359743833542,
+          200.4929631948471
+        ],
+        "candidate": [
+          203.084796667099,
+          199.20213520526886,
+          202.1513432264328,
+          204.1437327861786,
+          178.0230849981308,
+          198.66320490837097,
+          206.71281218528748,
+          203.45322787761688,
+          201.52148604393005,
+          200.73829591274261
+        ]
+      },
+      "median_ms": {
+        "baseline": 200.89471340179443,
+        "candidate": 201.83641463518143
+      },
+      "graph_correctness_replays": {}
+    },
+    {
+      "mode": "graph",
+      "reference_mode": "xvec",
+      "chunk_lengths": [
+        1,
+        25,
+        25,
+        25,
+        25,
+        25,
+        7
+      ],
+      "prefix_frames": 0,
+      "output_samples_by_chunk": [
+        1920,
+        48000,
+        48000,
+        48000,
+        48000,
+        48000,
+        13440
+      ],
+      "max_abs_error": 0.0,
+      "exact_waveform_and_cache_match": true,
+      "samples_ms_per_sequence": {
+        "baseline": [
+          101.69580578804016,
+          120.76115608215332,
+          119.84451115131378,
+          119.66092884540558,
+          120.2869564294815,
+          120.00413239002228,
+          120.05454301834106,
+          119.97534334659576,
+          120.03065645694733,
+          120.002880692482
+        ],
+        "candidate": [
+          140.34119248390198,
+          93.38147938251495,
+          121.95071578025818,
+          120.03456056118011,
+          119.96921896934509,
+          111.82714998722076,
+          119.94090676307678,
+          119.959756731987,
+          119.96451020240784,
+          119.97875571250916
+        ]
+      },
+      "median_ms": {
+        "baseline": 120.00350654125214,
+        "candidate": 119.96686458587646
+      },
+      "graph_correctness_replays": {
+        "baseline": [
+          {
+            "key": [
+              "xvec_prefix",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_26",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_51",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_76",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_97",
+              1,
+              1
+            ],
+            "replays": 3
+          }
+        ],
+        "candidate": [
+          {
+            "key": [
+              "xvec_prefix",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_26",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_51",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_76",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_97",
+              1,
+              1
+            ],
+            "replays": 3
+          }
+        ]
+      }
+    },
+    {
+      "mode": "graph",
+      "reference_mode": "icl",
+      "chunk_lengths": [
+        1,
+        25,
+        25,
+        25,
+        25,
+        25,
+        7
+      ],
+      "prefix_frames": 72,
+      "output_samples_by_chunk": [
+        1920,
+        48000,
+        48000,
+        48000,
+        48000,
+        48000,
+        13440
+      ],
+      "max_abs_error": 0.0,
+      "exact_waveform_and_cache_match": true,
+      "samples_ms_per_sequence": {
+        "baseline": [
+          132.55751132965088,
+          149.5092213153839,
+          127.00448930263519,
+          160.06536781787872,
+          159.9632054567337,
+          160.01556813716888,
+          159.93338823318481,
+          132.7155977487564,
+          121.76081538200378,
+          151.30577981472015
+        ],
+        "candidate": [
+          155.41143715381622,
+          131.44046068191528,
+          131.5399706363678,
+          152.4038314819336,
+          159.92316603660583,
+          160.01766920089722,
+          160.0179374217987,
+          159.99890863895416,
+          151.46148204803467,
+          134.68436896800995
+        ]
+      },
+      "median_ms": {
+        "baseline": 150.40750056505203,
+        "candidate": 153.9076343178749
+      },
+      "graph_correctness_replays": {
+        "baseline": [
+          {
+            "key": [
+              "icl_prefix",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_26",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_51",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_76",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_97",
+              1,
+              1
+            ],
+            "replays": 3
+          }
+        ],
+        "candidate": [
+          {
+            "key": [
+              "icl_prefix",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_26",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_51",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_76",
+              1,
+              1
+            ],
+            "replays": 1
+          },
+          {
+            "key": [
+              "suffix_97",
+              1,
+              1
+            ],
+            "replays": 3
+          }
+        ]
+      }
+    }
+  ]
+}

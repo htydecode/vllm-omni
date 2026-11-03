@@ -1,0 +1,130 @@
+{
+  "scope": "real-weight segmented decoder, fixed random codec IDs, batch 1, not serving or audio quality",
+  "source_file": "server-file:modeling_qwen3_tts_tokenizer_v2.py",
+  "source_sha256": "cb692d0c4a9b0b6aac797a78fcd39be085b0cc5a127ac508843d6fd5daf3a9b3",
+  "tokenizer_config_sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+  "checkpoint_files_bytes": {
+    "model.safetensors": 682293092
+  },
+  "attention": "sdpa",
+  "torch": "2.13.0+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA A10",
+  "dtype": "bfloat16",
+  "warmup": 2,
+  "repeats": 10,
+  "results": [
+    {
+      "mode": "eager",
+      "reference_mode": "xvec",
+      "chunk_lengths": [
+        1,
+        25,
+        25,
+        25,
+        25,
+        25,
+        7
+      ],
+      "prefix_frames": 0,
+      "output_samples_by_chunk": [
+        1920,
+        48000,
+        48000,
+        48000,
+        48000,
+        48000,
+        13440
+      ],
+      "max_abs_error": 0.0,
+      "exact_waveform_and_cache_match": true,
+      "samples_ms_per_sequence": {
+        "baseline": [
+          201.5647441148758,
+          201.93637907505035,
+          187.0054304599762,
+          227.22966969013214,
+          199.75188374519348,
+          165.22052884101868,
+          195.89440524578094,
+          191.85766577720642,
+          180.48767745494843,
+          225.4834622144699
+        ],
+        "candidate": [
+          193.26350092887878,
+          169.71641778945923,
+          181.72703683376312,
+          202.198788523674,
+          180.59180676937103,
+          202.93112099170685,
+          198.67172837257385,
+          171.48321866989136,
+          222.52915799617767,
+          181.2157779932022
+        ]
+      },
+      "median_ms": {
+        "baseline": 197.8231444954872,
+        "candidate": 187.49526888132095
+      },
+      "graph_correctness_replays": {}
+    },
+    {
+      "mode": "eager",
+      "reference_mode": "icl",
+      "chunk_lengths": [
+        1,
+        25,
+        25,
+        25,
+        25,
+        25,
+        7
+      ],
+      "prefix_frames": 72,
+      "output_samples_by_chunk": [
+        1920,
+        48000,
+        48000,
+        48000,
+        48000,
+        48000,
+        13440
+      ],
+      "max_abs_error": 0.0,
+      "exact_waveform_and_cache_match": true,
+      "samples_ms_per_sequence": {
+        "baseline": [
+          199.65188205242157,
+          200.54006576538086,
+          199.40342009067535,
+          199.35165345668793,
+          201.53595507144928,
+          199.89816844463348,
+          200.01666247844696,
+          198.58521223068237,
+          200.52948594093323,
+          200.0371515750885
+        ],
+        "candidate": [
+          200.38174092769623,
+          201.41994953155518,
+          169.7894036769867,
+          198.7343728542328,
+          199.77876543998718,
+          175.80853402614594,
+          202.72153615951538,
+          201.2706845998764,
+          198.0954110622406,
+          201.10243558883667
+        ]
+      },
+      "median_ms": {
+        "baseline": 199.95741546154022,
+        "candidate": 200.0802531838417
+      },
+      "graph_correctness_replays": {}
+    }
+  ]
+}

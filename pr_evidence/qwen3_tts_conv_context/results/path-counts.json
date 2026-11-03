@@ -1,0 +1,44 @@
+[
+  {
+    "label": "short",
+    "suffix_python": {
+      "calls": 0,
+      "eligible_calls": 0,
+      "old_frames": [],
+      "batch_buckets": []
+    },
+    "suffix_graph_replay": {
+      "calls": 2,
+      "eligible_calls": 1,
+      "old_frames": [
+        1,
+        26
+      ],
+      "batch_buckets": [
+        1
+      ]
+    }
+  },
+  {
+    "label": "long",
+    "suffix_python": {
+      "calls": 0,
+      "eligible_calls": 0,
+      "old_frames": [],
+      "batch_buckets": []
+    },
+    "suffix_graph_replay": {
+      "calls": 20,
+      "eligible_calls": 19,
+      "old_frames": [
+        1,
+        26,
+        51,
+        72
+      ],
+      "batch_buckets": [
+        1
+      ]
+    }
+  }
+]

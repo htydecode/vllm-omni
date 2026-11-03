@@ -1,0 +1,15 @@
+{
+  "base_commit": "7afd00e982dfa93c365eee5475a5707904b181e6",
+  "base_tree": "519b5e216fefee3a8422977c3a475d4235b656d7",
+  "contributor_model": "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
+  "microbenchmark_source_base": "630bd10d83b4c6942f11fdc5fb49394096daac10",
+  "server_source_sha256": "cb692d0c4a9b0b6aac797a78fcd39be085b0cc5a127ac508843d6fd5daf3a9b3",
+  "outgoing_files": [
+    "vllm_omni/model_executor/models/qwen3_tts/tokenizer_12hz/modeling_qwen3_tts_tokenizer_v2.py",
+    "tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py"
+  ],
+  "outgoing_sha256": {
+    "vllm_omni/model_executor/models/qwen3_tts/tokenizer_12hz/modeling_qwen3_tts_tokenizer_v2.py": "d0b46501c11ff0239970198c71f01e5fcf295d8a6fe0939e1a813b005a70886f",
+    "tests/model_executor/models/qwen3_tts/test_qwen3_tts_incremental_decode.py": "648368e2bce9408f3f34fb474099e0b193c35b111df3f4ab34da71e267215a8b"
+  }
+}
